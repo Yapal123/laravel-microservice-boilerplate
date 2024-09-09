@@ -1,0 +1,11 @@
+# ./docker-compose.yml
+version: '2'
+
+services:
+    rr:
+        build:
+            dockerfile: ./docker/Dockerfile
+        ports:
+            - '9005:9005' # шарим порт 9001
+        volumes:
+            - ./:/var/www/laravel
