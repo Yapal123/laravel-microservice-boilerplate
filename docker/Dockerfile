@@ -1,6 +1,6 @@
 FROM php:8.3-cli-alpine
 
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
+COPY --from=yapal/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
 
 WORKDIR /var/www/laravel
 
