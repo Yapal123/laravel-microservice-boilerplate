@@ -8,3 +8,4 @@ grpc:
 
   proto:
     - "proto/pinger.proto"
+  pool.debug: true
