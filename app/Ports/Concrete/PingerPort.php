@@ -10,7 +10,9 @@ use Spiral\RoadRunner\GRPC;
 
 class PingerPort implements PingerInterface
 {
-    public function __construct(private PingerAdapterInterface $pingerAdapter){}
+    public function __construct(private readonly PingerAdapterInterface $pingerAdapter)
+    {
+    }
 
     /**
      * @inheritDoc

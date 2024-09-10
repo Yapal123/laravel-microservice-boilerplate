@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package app;
+
+option php_namespace = "GRPC\\User";
+option php_metadata_namespace = "GRPC\\GPBMetadata";
+
+
+service User {
+    rpc GetUser (UserMessage) returns (UserMessage) {
+    }
+}
+
+message UserMessage {
+    int64 id = 1;
+    int32 city_id = 2;
+    string name = 3;
+    string last_name = 4;
+    string sur_name = 5;
+    bool is_active = 6;
+}

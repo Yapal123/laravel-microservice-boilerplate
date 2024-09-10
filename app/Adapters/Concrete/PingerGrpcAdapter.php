@@ -6,9 +6,12 @@ use App\DTO\Pinger\PingDTO;
 use App\Services\Contracts\PingerServiceInterface;
 use GRPC\Pinger\PingRequest;
 use App\Adapters\Contracts\PingerAdapterInterface;
+
 class PingerGrpcAdapter implements PingerAdapterInterface
 {
-    public function __construct(private readonly PingerServiceInterface $pingerService){}
+    public function __construct(private readonly PingerServiceInterface $pingerService)
+    {
+    }
 
     /**
      * @param PingRequest $pingData
