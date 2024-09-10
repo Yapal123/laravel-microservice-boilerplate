@@ -22,7 +22,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Generated\\": "Generated/",
+            "GRPC\\": "Generated/GRPC",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

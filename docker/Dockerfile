@@ -1,8 +1,8 @@
 FROM php:8.3-cli-alpine
 
-WORKDIR /var/www/laravel
-
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
+
+WORKDIR /var/www/laravel
 
 RUN install-php-extensions opcache zip sockets \
     protobuf \

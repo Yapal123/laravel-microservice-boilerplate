@@ -11,4 +11,6 @@ $kernel->bootstrap();
 
 $server = new Server();
 
+$server->registerService(\GRPC\Pinger\PingerInterface::class, new \App\Ports\Concrete\PingerPort());
+
 $server->serve(Worker::create());
