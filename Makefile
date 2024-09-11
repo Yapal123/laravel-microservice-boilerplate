@@ -1,13 +1,8 @@
-# shortcut to open terminal for console command
-include .env
-include /etc/os-release
-export UBUNTU_CODENAME
-
-rr:
-	docker compose exec -it rr /bin/bash
-
 build:
 	@docker compose build --parallel
+
+composer-install:
+	@docker compose run rr composer install
 
 build-force:
 	@docker compose build --parallel --no-cache
